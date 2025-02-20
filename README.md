@@ -45,7 +45,7 @@ Por outro lado, apesar de ainda ter uma vantagem, a diferença média de notas �
 
 ### Modelo
 
-Como citado anteriormente, foi utilizado o modelo de Floresta Aleatória da biblioteca sklearn (RandomForestClassifier). Para o treinamento, foram separados os filmes da base pelos anos de cerimônia dos quais eles participaram, de forma que todos os filmes do mesmo ano ficassem juntos no treinamento e no teste. A separação foi feita de forma que 77 cerimônias foram selecionadas para o treino, e as outras 19 ficaram para testes (80/20); dessas 19 usadas no teste, foi determinado o escolhido como "vencedor previsto" o filme com maior probabilidade calculada dentre os indicados, independente de seu valor absoluto. Dessa forma, os resultados desse teste foram o seguinte:
+Como citado anteriormente, foi utilizado o modelo de Floresta Aleatória da biblioteca sklearn (RandomForestClassifier). Para o treinamento, foram separados os filmes da base pelos anos de cerimônia dos quais eles participaram, de forma que todos os filmes do mesmo ano ficassem juntos no treinamento e no teste. A separação foi feita de forma que 77 cerimônias foram selecionadas para o treino, e as outras 19 ficaram para testes (80/20); dessas 19 usadas no teste, foi determinado o escolhido como "vencedor previsto" o filme com maior probabilidade calculada dentre os indicados, independente de seu valor absoluto. Para avaliação da eficácia do modelo, a métrica escolhida foi o recall, visto que, devido ao método alternativo de seleção das previsões do modelo, era necessária a utilização de uma métrica que avaliasse somente os casos positivos (vencedores). Dessa forma, os resultados desse teste foram o seguinte:
 
 ![Matriz de confusão](analises/matriz_confusao.png)
 
