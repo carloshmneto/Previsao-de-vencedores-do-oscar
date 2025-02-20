@@ -33,7 +33,11 @@ Recall: **66.67%** (vencedor certo foi o vencedor previsto em 67% dos casos)
 
 Top-2 Recall: **77.78%** (vencedor certo era um dos dois mais prováveis previstos em 78% dos casos)
 
+### Limitações
+
 Apesar de não ser um modelo perfeito, concluiu-se que um aprimoramento em seu desempenho apenas com dados disponíveis ao público seria demasiadamente complexo, considerando as diversas nuances subjetivas e informações confidenciais que acabam se passando durante uma votação de prêmios como o Oscar. Prova disso é a análise detalhada dos filmes nos quais o modelo não conseguiu prever corretamente o vencedor dentre os dois mais prováveis, sendo casos em que o vencedor da categoria naquele ano foi considerada uma grande surpresa mesmo entre especialistas de cinema (como por exemplo o ano de 2006, com o vencedor sendo o filme divisivo Crash - No Limite).
+
+Além disso, as próprias variáveis utilizadas no treinamento do modelo podem apresentar pequenos problemas que atrapalhariam uma acurácia do modelo para previsões futuras: o indicador de popularidade, por exemplo, provavelmente é de certa forma viezado para essa análise, visto que a popularidade de um filme no IMDb tem tendência de aumentar bastante caso o filme seja o vencedor do Oscar, fazendo com que essa variável para premiações passadas não esteja tão precisa em relação às outras. Outro problema tem relação com o crescimento recente de plataformas de streaming (Netflix, Disney+, entre outros) e filmes exclusivo desses serviços, os quais fazem uma variável como a de bilheteria e lucro menos efetivas; caso houvesse uma maneira de se metrificar a popularidade dos filmes dentro de tais plataformas, esse problema poderia ser contornado, mas novamente esses dados geralmente não são públicos, o que dificulta tais análises para cerimônias recentes do Oscar.
 
 ## Previsão do Oscar 2025
 
@@ -53,6 +57,14 @@ Ao final da validação do modelo, este foi utilizado para previsão do Oscar 20
 | 10     | Nickel Boys          | 2.40%         |
 
 Utilizando como base os resultados obtidos, espera-se que o vencedor do Oscar 2025 fique entre os filmes "The Brutalist" ou "Emilia Pérez". Para elaboração dos motivos do favoritismo de tais filmes, desenvolveu-se um explicador LIME (Local Interpretable Model-Agnostic Explanations):
+
+![Texto alternativo](analises/lime_brut.png)
+
+![Texto alternativo](analises/lime_emilia.png)
+
+![Texto alternativo](analises/lime_aea.png)
+
+Com base nessa avaliação, é possível se concluir o principal fator para se definir o favorito ao prêmio do oscar: a variável de vitória no globo de ouro é determinante para que Emilia Pérez esteja a frente do filme Ainda Estou Aqui, por exemplo. Depois dessa categoria principal, entram outros aspectos, como número de indicações totais e em categorias principais, lucro / orçamento dos filmes e duração. Comparando os dois favoritos, alguns dos fatores que colocaram The Brutalist como o favorito isolado são: sua nota média alta (acima de 7.85) e sua duração maior, além do fator de que Emilia Pérez gerou prejuízo para sua distribuidora nos cinemas.
 
 ## Contato
 - [Meu LinkedIn](https://www.linkedin.com/in/carlos-neto-5668b0265/)
