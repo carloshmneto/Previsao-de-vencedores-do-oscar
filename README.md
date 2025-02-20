@@ -28,6 +28,7 @@ Como citado anteriormente, foi utilizado o modelo de Floresta Aleatória da bibl
 ![Texto alternativo](analises/matriz_confusao.png)
 
 Recall: 66.67% (vencedor certo foi o vencedor previsto em 67% dos casos)
+
 Top-2 Recall: 77.78% (vencedor certo era um dos dois mais prováveis previstos em 78% dos casos)
 
 ### Previsão do Oscar 2025
@@ -36,8 +37,8 @@ Ao final da validação do modelo, este foi utilizado para previsão do Oscar 20
 
 | Posição | Filme               | Probabilidade |
 |--------|---------------------|---------------|
-| **1**  | **The Brutalist**    | **28.97%**    |
-| **2**  | **Emilia Pérez**     | **15.93%**    |
+| <span style="color: red;">1</span>     || <span style="color: red;">The Brutalist</span>    | <span style="color: red;">28.97%</span> |
+| <span style="color: red;">2</span>     || <span style="color: red;">Emilia Pérez</span>     | <span style="color: red;">15.93%</span> |
 | 3      | Ainda Estou Aqui     | 10.77%        |
 | 4      | Dune: Part Two       | 9.59%         |
 | 5      | Wicked               | 9.24%         |
