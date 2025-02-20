@@ -29,13 +29,13 @@ Como citado anteriormente, foi utilizado o modelo de Floresta Aleatória da bibl
 
 ![Texto alternativo](analises/matriz_confusao.png)
 
-Recall: 66.67% (vencedor certo foi o vencedor previsto em 67% dos casos)
+Recall: **66.67%** (vencedor certo foi o vencedor previsto em 67% dos casos)
 
-Top-2 Recall: 77.78% (vencedor certo era um dos dois mais prováveis previstos em 78% dos casos)
+Top-2 Recall: **77.78%** (vencedor certo era um dos dois mais prováveis previstos em 78% dos casos)
 
 Apesar de não ser um modelo perfeito, concluiu-se que um aprimoramento em seu desempenho apenas com dados disponíveis ao público seria demasiadamente complexo, considerando as diversas nuances subjetivas e informações confidenciais que acabam se passando durante uma votação de prêmios como o Oscar. Prova disso é a análise detalhada dos filmes nos quais o modelo não conseguiu prever corretamente o vencedor dentre os dois mais prováveis, sendo casos em que o vencedor da categoria naquele ano foi considerada uma grande surpresa mesmo entre especialistas de cinema (como por exemplo o ano de 2006, com o vencedor sendo o filme divisivo Crash - No Limite).
 
-### Previsão do Oscar 2025
+## Previsão do Oscar 2025
 
 Ao final da validação do modelo, este foi utilizado para previsão do Oscar 2025, visto que os indicados já haviam sido indicados ao momento da finalização do projeto, sem definição do vencedor. Preenchidas as informações, os resultados foram os seguintes:
 
@@ -51,6 +51,8 @@ Ao final da validação do modelo, este foi utilizado para previsão do Oscar 20
 | 8      | Conclave             | 4.76%         |
 | 9      | The Substance        | 3.75%         |
 | 10     | Nickel Boys          | 2.40%         |
+
+Utilizando como base os resultados obtidos, espera-se que o vencedor do Oscar 2025 fique entre os filmes "The Brutalist" ou "Emilia Pérez". Para elaboração dos motivos do favoritismo de tais filmes, desenvolveu-se um explicador LIME (Local Interpretable Model-Agnostic Explanations):
 
 ## Contato
 - [Meu LinkedIn](https://www.linkedin.com/in/carlos-neto-5668b0265/)
